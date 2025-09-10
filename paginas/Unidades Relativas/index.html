@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unidades Relativas</title>
+</head>
+<body>
+
+    <!-- MENU -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/Cinnamorrol ___ - Editado.png" alt="Cinnamoroll Logo">
+                <h1>BITACORA</h1>
+            </div>
+            <nav class="menu">         
+                <a href="../../index.html">Inicio</a>
+                <a href="../Manipulacion_DOM/index.html">Manipulacion_DOM</a>
+                <a href="../Media Queris/index.html">Media Queris</a>
+                <a href="../Unidades Relativas/index.html">Unidades Relativas</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="contenedor"> <!-- CORRECTO -->
+        <p class="unidad-em">Unidad relativa em</p>
+        <p>La unidad em es una unidad relatva del contenedor padre si al contenedorle definimos un font-size de 20px
+            1em valdria 20px. 2em valdria 40px.
+        </p>
+    </div>
+    <hr>
+
+    <div class="contenedor">
+        <p class="unidad-rem">Unidad relativa rem</p>
+        <p>Es una unidad de ,media relativa al elemento raiz (root) es muy similar a la em, sin embargo depende del 
+        tamaño que le asignemos a el estilo en la clase html si en el html aisgno un font-size de 20px , 1rem seria 20px 
+        2rem serian 40px , esta unidad no depende del contendor padre solo dell contenedor raiz(html).
+    </p>
+    </div>
+    <hr>
+
+    <div class="contenedor">
+        <p class="unidad-vw">Unidad relativa vw (viwport width)</p>
+        <p> Es una relativa al ancho de mi pantalla, esto va a depender totalmente del dispositivo que este utilizando,
+            es una unidad que no depende de ningun contendor ni del arcvio raiz depende totalmente de los pixeles de la pantalla.
+    </p>
+    </div>
+    <hr>
+    
+    <div class="contenedor">
+            <p class="unidad-vh">Unidad relativa vh (viewport height)</p>
+        <p>Es una relativa al alto de mi pantalla, esto va a depender totalmente del dispositivo que este utilizando,
+            es una unidad que no depende de ningun contendor ni del arcvio raiz depende totalmente de los pixeles de la pantalla.
+    </p>
+    </div>
+    <hr>
+
+        <div class="contenedor">
+        <p class="unidad-vmin">Unidad relativa vmin/p>
+        <p> Es una unidad relativa al lado mas pequeño del viewport y es un porcentaje por ejemplo si mi pantalla tiene un alto de
+            50px y un ancho de 800px y pongo que sea de 10vmin tomaria el tamaño del 10% de 500px que seria un equivalente 50px
+    </p>
+    </div>
+    <hr>
+    
+    <div class="contenedor">
+        <p class="unidad-vmax">Unidad relativa vmax</p>
+        <p>  Es una unidad relativa al lado mas grande del viewport y es un porcentaje por ejemplo si mi pantalla tiene un alto de
+            50px y un ancho de 800px y pongo que sea de 10vmin tomaria el tamaño del 10% de 500px que seria un equivalente 80px
+    </p>
+    </div>
+    <hr>
+
+        <!-- Pie de pagina -->
+<footer>
+  <p>&copy; 2025 Tania Guerrero | Todos los derechos reservados</p>
+</footer>
+
+
+</body>
+</html>
