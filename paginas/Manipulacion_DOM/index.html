@@ -8,71 +8,88 @@
 </head>
 <body>
 
-        <!-- MENU -->
+    <!-- MENU -->
     <header class="header">
         <div class="container">
             <div class="logo">
                 <img src="recursos/Cinnamorrol ___ - Editado.png" alt="Cinnamoroll Logo">
                 <h1>BITACORA</h1>
             </div>
-            <nav class="menu">         
-                <a href="../../index.html">Inicio</a>
-                <a href="../Manipulacion_DOM/index.html">Manipulacion_DOM</a>
-                <a href="../Media Queris/index.html">Media Queris</a>
-                <a href="../Unidades Relativas/index.html">Unidades Relativas</a>
+            <nav class="menu">
+                <ul class="menu-principal">
+                    <li><a href="../../index.html">Inicio</a></li>
+
+                    <li><a href="#">Parcial 1</a>
+                        <ul class="submenu">
+                            <li><a href="../Manipulacion_DOM/index.html">Manipulación DOM</a></li>
+                            <li><a href="../Media Queris/index.html">Media Queries</a></li>
+                            <li><a href="../Unidades Relativas/index.html">Unidades Relativas</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Parcial 2</a>
+                        <ul class="submenu">
+                            <li><a href="../Tipografía e Imágenes Responsivas/index.html">Tipografías e Imágenes</a></li>
+                            <li><a href="../FLEX/index.html">Flex</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Parcial 3</a>
+                        <ul class="submenu">
+                            <li><a href="../parcial3/tema1.html">Tema 1</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
 
-<!-- Cambiar texto -->
-<div class="card">
-    <h3 id="texto">¡Hola a todos los que lo leen!</h3>
-    <button onclick="cambiarTexto()">Cambiar texto</button>
-</div>
+    <!-- TARJETAS DE EJEMPLO -->
+    <div class="card">
+        <h3 id="texto">¡Hola a todos los que lo leen!</h3>
+        <button onclick="cambiarTexto()">Cambiar texto</button>
+    </div>
 
-<!-- Cambiar color -->
-<div class="card" id="colorBox">
-    <h3>Color de fondo</h3>
-    <button onclick="cambiarColor()">Cambiar color</button>
-</div>
+    <div class="card" id="colorBox">
+        <h3>Color de fondo</h3>
+        <button onclick="cambiarColor()">Cambiar color</button>
+    </div>
 
-<!-- Cambiar imagen -->
-<div class="card">
-    <img id="foto" src="recursos/Lindo sol en el cielo azul _ Vector Premium.jpg">
-    <button onclick="cambiarImagen()">Cambiar imagen</button>
-</div>
+    <div class="card">
+        <img id="foto" src="recursos/Lindo sol en el cielo azul _ Vector Premium.jpg" alt="Imagen de ejemplo">
+        <button onclick="cambiarImagen()">Cambiar imagen</button>
+    </div>
 
-<!-- Libre -->
-<div class="card">
-    <h3 id="libre">Efecto libre</h3>
-    <button onclick="efectoLibre()">Activar</button>
-</div>
+    <div class="card">
+        <h3 id="libre">Efecto libre</h3>
+        <button onclick="efectoLibre()">Activar</button>
+    </div>
 
-<script>
-    function cambiarTexto() {
-        document.getElementById("texto").innerText = "¡Adios a los que clikearon!";
-    }
+    <footer>
+      <p>&copy; 2025 Tania Guerrero | Todos los derechos reservados</p>
+    </footer>
 
-    function cambiarColor() {
-        let colores = ["#ff9999", "#99ff99", "#9999ff", "#ffff99"];
-        let aleatorio = colores[Math.floor(Math.random() * colores.length)];
-        document.getElementById("colorBox").style.background = aleatorio;
-    }
+    <script>
+        function cambiarTexto() {
+            document.getElementById("texto").innerText = "¡Adiós a los que clickean!";
+        }
 
-    function cambiarImagen() {
-            document.getElementById("foto").src = "https://i.pinimg.com/736x/b2/86/4b/b2864bf1598012b326682cb287f6b687.jpg"
-    }
+        function cambiarColor() {
+            let colores = ["#ff9999", "#99ff99", "#9999ff", "#ffff99"];
+            let aleatorio = colores[Math.floor(Math.random() * colores.length)];
+            document.getElementById("colorBox").style.background = aleatorio;
+        }
 
-    function efectoLibre() {
-        let textoLibre = document.getElementById("libre");
-        textoLibre.style.color = textoLibre.style.color === "red" ? "black" : "red";
-        textoLibre.innerText = textoLibre.innerText === "Efecto libre" ? "¡Efecto activado!" : "Efecto libre";
-    }
-</script>
+        function cambiarImagen() {
+            document.getElementById("foto").src = "https://i.pinimg.com/736x/b2/86/4b/b2864bf1598012b326682cb287f6b687.jpg";
+        }
 
-<footer>
-  <p>&copy; 2025 Tania Guerrero | Todos los derechos reservados</p>
-</footer>
+        function efectoLibre() {
+            let textoLibre = document.getElementById("libre");
+            textoLibre.style.color = textoLibre.style.color === "red" ? "black" : "red";
+            textoLibre.innerText = textoLibre.innerText === "Efecto libre" ? "¡Efecto activado!" : "Efecto libre";
+        }
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,271 @@
+/* ---------- RESET Y BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, #b0e9ff, #ffe1f0);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------- TIPOGRAFÍAS PERSONALIZADAS ---------- */
+@font-face {
+    font-family: 'Chewi';
+    src: url('fonts/Chewy-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Delius';
+    src: url('fonts/DeliusSwashCaps-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Schoolbell';
+    src: url('fonts/Schoolbell-Regular.ttf') format('truetype');
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    width: 100%;
+    background: #34a7d9;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.logo h1 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+/* Menú con submenú */
+.menu-principal {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-principal > li {
+    position: relative;
+}
+
+.menu-principal a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.menu-principal a:hover {
+    background: rgba(255,255,255,0.2);
+    color: #fdd5e7;
+}
+
+/* Submenu oculto */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #34a7d9;
+    border-radius: 6px;
+    list-style: none;
+    min-width: 150px;
+    z-index: 5;
+}
+
+.submenu li a {
+    padding: 8px 12px;
+    color: #fff;
+}
+
+.submenu li a:hover {
+    background: rgba(255,255,255,0.2);
+    color: #fdd5e7;
+}
+
+/* Mostrar submenu al pasar el mouse */
+.menu-principal li:hover .submenu {
+    display: block;
+}
+
+/* ---------- MAIN ---------- */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid #34a7d9;
+    border-radius: 16px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ---------- TITULOS ---------- */
+main h1 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+main h2 {
+    font-size: 24px;
+    color: #34a7d9;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+main h3 {
+    font-size: 20px;
+    color: #34a7d9;
+    border-left: 5px solid #fdd5e7;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+/* CARD: cada sub-sección */
+main > div,
+main > p,
+main > img {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #34a7d9;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Párrafos */
+main p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Imágenes */
+main img {
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ---------- SECCIÓN DE UNIDADES ---------- */
+.unidades h2 {
+    font-size: 2rem; /* rem = relativo al tamaño raíz del html */
+}
+
+.unidades h3 {
+    font-size: 1.5em; /* em = relativo al tamaño del padre */
+}
+
+.vh-box {
+    height: 30vh; /* vh = 30% de la altura de la pantalla */
+    background: #fdd5e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* ---------- TIPOGRAFÍAS ---------- */
+.chewi {
+    font-family: 'Chewi';
+    font-size: 1rem;
+}
+
+.delius {
+    font-family: 'Delius';
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Texto responsivo */
+}
+
+.schoolbell {
+    font-family: 'Schoolbell';
+    font-size: 1.2rem;
+}
+
+/* ---------- IMÁGENES RESPONSIVAS ---------- */
+.imagenes-responsivas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* ---------- PIE DE PAGINA ---------- */
+footer {
+  background-color: #34a7d9;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .vh-box {
+        height: 20vh;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+    .vh-box {
+        height: 25vh;
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        font-size: 18px;
+    }
+    .vh-box {
+        height: 35vh;
+    }
+}

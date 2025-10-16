@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Diseño_Adaptativo</title>
+</head>
+<body>
+
+    <!-- MENU -->
+        <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/Cinnamorrol ___ - Editado.png" alt="Cinnamoroll Logo">
+                <h1>BITACORA</h1>
+            </div>
+            <nav class="menu">
+                <ul class="menu-principal">
+                    <li><a href="../../index.html">Inicio</a>
+                    <li><a href="#">Parcial 1</a>
+                        <ul class="submenu">
+                            <li><a href="../Manipulacion_DOM/index.html">Manipulacion_DOM</a></li>
+                            <li><a href="../Media Queris/index.html">Media Queris</a></li>
+                            <li><a href="../Unidades Relativas/index.html">Unidades Relativas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Parcial 2</a>
+                        <ul class="submenu">
+                            <li><a href="../Tipografía e Imágenes Responsivas/index.html">Tipografias e Imagenes</a></li>
+                            <li><a href="../FLEX/index.html">Flex</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Parcial 3</a>
+                        <ul class="submenu">
+                            <li><a href="paginas/parcial3/tema1.html"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>DISEÑO ADAPTATIVO</h1>
+        <h2>"Tipografia e Imagenes Responsivas"</h2>
+
+        <p>En este espacio de pagina se mostrara como usamos las unidades relativas, tipografias Responsivas
+            e imagenes adaptativas para mejorar la experencia de diferentes dispositivos.
+        </p>
+
+        <!-- Sección de Unidades de Medida -->
+        <div class="unidades">
+            <h3>Sección de Unidades de Medida</h3>
+            <h2>Título en REM</h2>
+            <h3>Subtítulo en EM</h3>
+            <div class="vh-box">
+                <p>Bloque con altura en VH (30% de la pantalla)</p>
+            </div>
+        </div>
+
+        <!-- Tipografías personalizadas -->
+        <div>
+            <h3>Tipografía personalizada y Responsiva</h3>
+
+            <section class="bloque-tipografia">
+                <h2>Tipografía: Chewi (Google Fonts)</h2>
+                <p class="chewi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at libero ac sapien fermentum tempor.</p>
+            </section>
+
+            <section class="bloque-tipografia">
+                <h2>Tipografía: Delius Swash Caps (Google Fonts)</h2>
+                <p class="delius">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget magna nec turpis faucibus tincidunt.</p>
+            </section>
+
+            <section class="bloque-tipografia">
+                <h2>Tipografía: Schoolbell-Regular (Google Fonts)</h2>
+                <p class="schoolbell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod magna a magna tincidunt, nec faucibus lorem bibendum.</p>
+            </section>
+        </div>
+
+        <!-- Imágenes responsivas -->
+        <div class="imagenes-responsivas">
+            <h3>Imágenes Responsivas</h3>
+
+            <!-- Imagen con srcset y sizes -->
+            <img 
+                src="img/ejemplo-800.jpg" 
+                srcset="img/cina-400px.png 400w, img/cina-800px.png 800w, img/cina-1200px.png 1200w"
+                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 70vw, 50vw"
+                alt="Ejemplo con srcset y sizes">
+
+            <!-- Imagen con picture y source -->
+            <picture>
+                <source media="(max-width: 600px)" srcset="img/vertical.png">
+                <source media="(min-width: 601px)" srcset="img/horizontal.png">
+                <img src="img/horizontal.png" alt="Ejemplo con picture y source">
+            </picture>
+        </div>
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+      <p>&copy; 2025 Tania Guerrero | Todos los derechos reservados</p>
+    </footer>
+    
+</body>
+</html>
